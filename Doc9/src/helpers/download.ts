@@ -24,4 +24,3 @@ export async function downloadImage(url: string) {
       }).on('error', reject);
     });
   }
-  
