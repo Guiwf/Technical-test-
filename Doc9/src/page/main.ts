@@ -4,7 +4,6 @@ import path from 'path';
 import { formatToCSV } from '../helpers/csvconvert';
 import { downloadImage } from '../helpers/download';
 
-
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
 (async () => {
@@ -94,4 +93,3 @@ const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
   await browser.close();
 
 })();
-
