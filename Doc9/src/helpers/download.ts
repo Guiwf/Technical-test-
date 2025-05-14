@@ -1,4 +1,4 @@
-import https from 'https'; // Importação para fazer o download da imagem
+import https from 'https'; 
 
 export async function downloadImage(url: string) {
     const fs = require('fs');
