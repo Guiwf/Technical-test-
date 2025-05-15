@@ -20,11 +20,11 @@ Certifique-se de que você tem as seguintes ferramentas instaladas em sua máqui
 
 ### 1. Clonar o repositório
 
-# Primeiro, clone o repositório para sua máquina local:
+## Primeiro, clone o repositório para sua máquina local:
 
 ### 2. Rodar o projeto
 
-# Para rodar o projeto entre na pasta src/page e digite ts-node main.ts ou npx  ts-node main.ts
+## Para rodar o projeto entre na pasta src/page e digite ts-node main.ts ou npx  ts-node main.ts
 
 ## COMANDOS ##
 
