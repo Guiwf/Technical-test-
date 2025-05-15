@@ -4,7 +4,7 @@ import path from 'path';
 import { formatToCSV } from '../helpers/csvconvert';
 import { downloadImage } from '../helpers/download';
 
-const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+const baseurl = 'https://rpachallengeocr.azurewebsites.net';
 
 (async () => {
   const browser = await puppeteer.launch({
@@ -14,7 +14,7 @@ const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
   });
 
   const page = await browser.newPage();
-  await page.goto('https://rpachallengeocr.azurewebsites.net', { waitUntil: 'networkidle2' });
+  await page.goto(baseurl, { waitUntil: 'networkidle2' });
 
   const downloadPath = path.join(__dirname, 'downloads');
   if (!fs.existsSync(downloadPath)) {
@@ -56,7 +56,7 @@ const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
         data.push({ number: num, id, date, invoice: link || '' });
 
         if (link) {
-          const imageUrl = `https://rpachallengeocr.azurewebsites.net${link}`;
+          const imageUrl = baseurl + `${link}`;
           console.log(`Baixando imagem de: ${imageUrl}`);
           await downloadImage(imageUrl);
         }
@@ -67,7 +67,6 @@ const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
       const nextButton = await page.$('a[class="paginate_button next"]');
       if (nextButton) {
         await nextButton.click();
-        await delay(500);
       } else {
         console.log('Botão "Next" não encontrado.');
         break;
@@ -89,7 +88,7 @@ const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
   } else {
     console.log('Dados não encontrados');
   }
-
+  
   await browser.close();
 
 })();
