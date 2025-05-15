@@ -6,25 +6,30 @@ Este projeto utiliza o [Puppeteer](https://pptr.dev/) para automatizar o navegad
 
 Certifique-se de que você tem as seguintes ferramentas instaladas em sua máquina:
 
-- **Node.js**: [Baixe a versão mais recente do Node.js](https://nodejs.org/)
-- **Yarn** (opcional, mas recomendado): [Instale o Yarn](https://yarnpkg.com/getting-started/install) ou use `npm` para instalar as dependências.
+-  **Node.js**: Baixe a versão mais recente do Node.js
+
+-  **Yarn** (opcional, mas recomendado): Instale o Yarn ou use npm para instalar as dependências.
+
+-  **TypeScript**: necessário para utilizar o projeto com arquivos .ts.
+
+-  **ts-node ou tsx**: necessário para executar arquivos TypeScript diretamente.
+
+-  **Puppeteer**: use a versão mais recente para garantir compatibilidade com as features atuais do navegador.
 
 ## Passos para rodar o projeto
 
 ### 1. Clonar o repositório
 
-Primeiro, clone o repositório para sua máquina local:
+## Primeiro, clone o repositório para sua máquina local:
 
-```bash
-git clone <URL_DO_REPOSITORIO>
-cd <NOME_DA_PASTA_DO_REPOSITORIO>
+### 2. Rodar o projeto
 
-# Para rodar o projeto entre na pasta src/page e digite ts-node main.ts
+## Para rodar o projeto entre na pasta src/page e digite ts-node main.ts ou npx  ts-node main.ts
 
-# O projeto utiliza as seguintes dependências:
+## COMANDOS ##
 
-# Puppeteer: Para automatizar o navegador e realizar scraping.
-
-# TypeScript: Para compilar o código em JavaScript.
-
-# ts-node: Para rodar arquivos TypeScript diretamente sem precisar de compilação prévia.
+- yarn install
+- npm install
+- npm install -D typescript
+- npm install -D tsx
+- npm install puppeteer
